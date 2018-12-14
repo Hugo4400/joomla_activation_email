@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.0" type="plugin" group="user">
+    <name>Activation email</name>
+    <author>Hugo Moracchini</author>
+    <creationDate>December 2018</creationDate>
+    <copyright>Hugo Moracchini 2018</copyright>
+    <license>GPLv2 or later</license>
+    <authorEmail>hugo@morac.ch</authorEmail>
+    <version>1.0</version>
+    <description>A plugin which sends an email on new user creation containing a registration link.</description>
+    <files>
+        <filename plugin="activation_email">activation_email.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_user_activation_email.ini</language>
+        <language tag="fr-FR">fr-FR.plg_user_activation_email.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="subject" type="field" default="" label="Subject" />
+                <field name="message" type="editor" width="50" filter="safehtml" hide="readmore,pagebreak" default="" description="PLG_ACTIVATION_EMAIL_DESC" label="Email" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
