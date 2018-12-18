@@ -176,7 +176,8 @@ class plgUserActivation_email extends JPlugin {
 			'SITE_NAME'     => $config->get('sitename'),
 			'ACTIVATION_URL' => $baseURL.'/index.php?option=com_users&task=edit&emailactivation=1&u='.$userID.'&'.$md5Token.'=1',
 			'BASE_URL'      => $baseURL,
-			'USER_LOGIN'    => $data['username']
+			'USER_LOGIN'    => $data['username'],
+			'USER_PASSWORD' => $data['password_clear']
 		];
 
 		// Send the email.
